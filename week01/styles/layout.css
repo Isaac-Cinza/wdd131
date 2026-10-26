@@ -5,13 +5,13 @@ body {
 }
 
 header {
-    background: rgb(100, 177, 235);
+    background: rgb(105, 203, 225);
     padding: 2rem;
     grid-column: 1 / 4;
 }
 
 .left-sidebar {
-    background: rgba(116, 237, 124, 0.895);
+    background: rgba(225, 248, 249, 0.642);
     grid-column: 1 / 2;
 }
 
@@ -21,7 +21,7 @@ main {
 }
 
 .right-sidebar {
-    background: rgb(244, 109, 109);
+    background: rgb(225, 243, 255);
     grid-column: 3 / 4;
 }
 
