@@ -1,38 +1,150 @@
 body {
-    display: grid;
-    height: 100vh;
-    grid-template: auto 1fr auto / 300px 1fr auto;
+    margin: 0;
+    line-height: 1.6;
 }
 
 header {
-    background: rgb(105, 203, 225);
-    padding: 2rem;
-    grid-column: 1 / 4;
+    margin: 0;
+    padding: 0;
 }
 
-.left-sidebar {
-    background: rgba(225, 248, 249, 0.642);
-    grid-column: 1 / 2;
+#course-title {
+    display: block;
+    background-color: #d3e4eb;
+    color: #000;
+    text-align: center;
+    font-family: "Great Vibes", "Segoe Script", cursive;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #262527;
+    padding: 0 2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #e9f5ff;
+    color: #c4002f;
 }
 
 main {
-    background: rgb(239, 233, 231);
-    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-.right-sidebar {
-    background: rgb(225, 243, 255);
-    grid-column: 3 / 4;
+main h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.card h2 {
+    background-color: #1d4f79;
+    color: #fff;
+    text-align: center;
+    margin: -1rem -1rem 1rem;
+    padding: 0.6rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.card h3 {
+    text-align: center;
+    width: 70%;
+    margin: 1rem auto;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #aaa;
+}
+
+/* Card 1: text on the left, photo on the right */
+.about {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.about img {
+    flex-shrink: 0;
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 60px 60px 16px 16px;
+    box-shadow: 8px 8px 0 #00008b;
+    margin: 0 8px 8px 0;
+}
+
+/* Card 1: flag on the left, text on the right */
+.kuetu {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.kuetu figure {
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.kuetu img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+/* Card 2: the list is centered inside the card */
+.card:last-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+.card:last-of-type ul {
+    margin: auto;
 }
 
 footer {
-    background: rgb(126, 237, 231);
-    padding: 2rem;
+    background-color: #1d4f79;
+    color: #fff;
     text-align: center;
-    grid-column: 1 / 4;
+    padding: 1rem;
 }
 
-.left-sidebar,
-.right-sidebar {
-    padding: 1rem;
+@media (max-width: 700px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about,
+    .kuetu {
+        flex-direction: column;
+    }
 }
