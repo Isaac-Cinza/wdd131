@@ -1,0 +1,129 @@
+/* Reset */
+body {
+    margin: 0;
+}
+
+/* 1. Header span as a block */
+#course-title {
+    display: block;
+    background-color: #d3e4eb;
+    color: #000000;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 1rem;
+    font-family: "Great Vibes", cursive;
+}
+
+/* 2. Flex navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262527;
+    padding: 0.6rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* 3. Hover effect */
+nav a:hover {
+    background-color: #e9f5ff;
+    color: #ff0644;
+}
+
+/* 4. Main: limited width, centered */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+main h1 {
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* 5. Cards with CSS Grid */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+main h1 {
+    grid-column: 1 / -1;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.card h2 {
+    background-color: #1d4f79;
+    color: #fff;
+    text-align: center;
+    margin: -1rem -1rem 1rem;
+    padding: 0.6rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.about {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    text-align: justify;
+}
+
+.card h3 {
+    text-align: center;
+    width: 70%;
+    margin: 1rem auto;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #aaa;
+}
+
+.kuetu {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-right: 20px;
+    text-align: justify;
+}
+
+.about img {
+    flex-shrink: 0;
+    width: 120px;
+    height: auto;
+}
+
+.about img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 60px 60px 16px 16px;
+    box-shadow: 8px 8px 0 #00008b;
+    margin: 0 8px 8px 0;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+footer {
+    background-color: #1d4f79;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
