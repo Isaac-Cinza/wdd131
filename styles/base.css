@@ -80,6 +80,7 @@ main h1 {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
+    text-align: justify;
 }
 
 .about img {
@@ -98,6 +99,7 @@ main h1 {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
+    text-align: justify;
 }
 
 .kuetu figure {
